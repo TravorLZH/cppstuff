@@ -6,5 +6,4 @@ add_executable(vectordemo vectordemo.cpp)
 
 # Executable: regexdemo
 add_executable(regexdemo regexdemo.c)
-target_link_libraries(regexdemo
-        gnurx)
+target_link_libraries(regexdemo)
