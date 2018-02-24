@@ -7,3 +7,7 @@ CMakeCache.txt
 *.exe
 vectordemo
 regexdemo
+swapdemo
+searchdemo
+customcmpsearch
+.*.swp
