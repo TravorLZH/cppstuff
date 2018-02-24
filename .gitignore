@@ -1,8 +1,9 @@
-.idea/
-cmake-build-debug/
 CMakeFiles/
 Makefile
 *.cmake
 CMakeCache.txt
 *.o
+*.a
 *.exe
+vectordemo
+regexdemo
