@@ -4,11 +4,17 @@ This is the first repository I created in C++. I have been writing programs in C
 
 > You should prepare all the libraries needed in order to generate Makefiles
 
-1. **vectordemo**: A demonstration of `std::vector`. It's something similar to an array. But it contains more methods. It simply prints out everything inside the array.
+## Executables
 
-1. **regexdemo**: A demonstration of **POSIX BRE** written in C language using **libgnurx** because I can't use the standard **C++11**'s regex library in **MinGW**.
+* **vectordemo**: A demonstration of `std::vector`. It's something similar to an array. But it contains more methods. It simply prints out everything inside the array.
 
-1. **libvoid**: A set of functions that demonstrates generic type `void*`.
+* **regexdemo**: A demonstration of **POSIX BRE** written in C language using **libgnurx** because I can't use the standard **C++11**'s regex library in **MinGW**.
+
+* **posixeredemo**: A demonstration of **POSIX ERE** which stands for Extended Regular Expression, written in C language too. I recently discovered that the only difference is to add REG\_EXTENDED in `cflags`.
+
+## Libraries
+
+* **libvoid**: A set of functions that demonstrates generic type `void*`.
 
 | Function Prototypes | Description |
 |:------|:------|
@@ -16,11 +22,14 @@ This is the first repository I created in C++. I have been writing programs in C
 | void\* lsearch(void\* key,void\* base,size\_t n,size\_t each) | Search stuff from an unknown type array and returns the address of the result. |
 | void\* lsearchx(void\* key,void\* base,size\_t n,size\_t each,cmpfunc cmp) | Same as **lsearch**, but with a custom function for comparing values |
 
-## Demonstrations of libvoid
+### Demonstrations of libvoid
 
-1. **swapdemo**: Demonstration of **swap()**.
+* **swapdemo**: Demonstration of **swap()**.
 
-1. **searchdemo**: Demonstration of **lsearch()**.
+* **searchdemo**: Demonstration of **lsearch()**.
 
-1. **customcmpsearch**: Demonstration of **lsearchx()**.
+* **customcmpsearch**: Demonstration of **lsearchx()**.
 
+## Documents
+
+* **man\_regex.txt**: regular expression manual from Linux. I got function prototypes here.
