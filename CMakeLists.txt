@@ -23,11 +23,16 @@ target_link_libraries(searchdemo void)
 # Executable: customcmpsearch
 add_executable(customcmpsearch customcmpsearch.c)
 target_link_libraries(customcmpsearch void)
+
+# ExecutableL posixeredemo
+add_executable(posixeredemo posixeredemo.c)
+
 if(WIN32)
-    find_library(regex-lib gnurx)
-    if(NOT regex-lib)
-        message(FATAL_ERROR "Cannot find libgnurx")
-    else()
-        target_link_libraries(regexdemo ${regex-lib})
-    endif()
+	find_library(regex-lib gnurx)
+	if(NOT regex-lib)
+		message(FATAL_ERROR "Cannot find libgnurx")
+	else()
+        	target_link_libraries(regexdemo ${regex-lib})
+		target_link_libraries(posixeredemo ${regex-lib})
+	endif()
 endif()
