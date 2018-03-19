@@ -24,8 +24,11 @@ target_link_libraries(searchdemo void)
 add_executable(customcmpsearch customcmpsearch.c)
 target_link_libraries(customcmpsearch void)
 
-# ExecutableL posixeredemo
+# Executable: posixeredemo
 add_executable(posixeredemo posixeredemo.c)
+
+# Executable: globalctordemo
+add_executable(globalctors globalctors.c)
 
 if(WIN32)
 	find_library(regex-lib gnurx)
