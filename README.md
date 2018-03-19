@@ -12,6 +12,8 @@ This is the first repository I created in C++. I have been writing programs in C
 
 * **posixeredemo**: A demonstration of **POSIX ERE** which stands for Extended Regular Expression, written in C language too. I recently discovered that the only difference is to add REG\_EXTENDED in `cflags`.
 
+* **globalctors**: A demonstration of **GCC Global Constructor**: A function that is automatically called before **main**.
+
 ## Libraries
 
 * **libvoid**: A set of functions that demonstrates generic type `void*`.
