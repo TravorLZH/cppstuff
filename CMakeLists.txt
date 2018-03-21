@@ -30,6 +30,12 @@ add_executable(posixeredemo posixeredemo.c)
 # Executable: globalctordemo
 add_executable(globalctors globalctors.c)
 
+# Executable: bitfield
+add_executable(bitfield bitfield.c)
+
+# Executable: structdemo
+add_executable(structdemo structdemo.c)
+
 if(WIN32)
 	find_library(regex-lib gnurx)
 	if(NOT regex-lib)
