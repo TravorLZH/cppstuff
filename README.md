@@ -14,6 +14,20 @@ This is the first repository I created in C++. I have been writing programs in C
 
 * **globalctors**: A demonstration of **GCC Global Constructor**: A function that is automatically called before **main**.
 
+## Structures
+
+* **bitfield**: A program that shows the value of struct with bitfield in the memory
+```
+struct{
+	char a:1;
+	char b:1;
+	char c:1;
+	char d:2;
+} bitfield;
+```
+
+* **structdemo**: A program that shows difference between packed struct and default (aligned) struct.
+
 ## Libraries
 
 * **libvoid**: A set of functions that demonstrates generic type `void*`.
