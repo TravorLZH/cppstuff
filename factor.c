@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 #include <malloc.h>
 #include <assert.h>
@@ -74,14 +75,20 @@ int main(int argc,char **argv){
 	int a,b,c;	// Input variables
 	int x1,c1,x2,c2;	// Output variables
 	int i;
-	printf("%s: enter coefficient for: ax^2+bx+c\n",__func__);
-	printf("a=");
-	scanf("%d",&a);
-	printf("b=");
-	scanf("%d",&b);
-	printf("c=");
-	scanf("%d",&c);
-	assert(c!=0);
+	if(argc<4){
+		printf("%s: enter coefficient for: ax^2+bx+c\n",__func__);
+		printf("a=");
+		scanf("%d",&a);
+		printf("b=");
+		scanf("%d",&b);
+		printf("c=");
+		scanf("%d",&c);
+		assert(c!=0);
+	}else{
+		a=atoi(argv[1]);
+		b=atoi(argv[2]);
+		c=atoi(argv[3]);
+	}
 	printf("%s: Processing %dx^2%+dx%+d...\n",__func__,a,b,c);
 	if(factor(a,b,c,&x1,&c1,&x2,&c2)){
 		printf("Prime!\n");
