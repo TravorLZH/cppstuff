@@ -111,6 +111,15 @@ int main(int argc,char **argv){
 		printf("Prime!\n");
 		return;
 	}
-	printf("%s: (%dx%+d)*(%dx%+d)\n",__func__,x1,c1,x2,c2);
+	if(x1==1){
+		printf("(x%+d)",c1);
+	}else{
+		printf("(%dx%+d)",x1,c1);
+	}
+	if(x2==1){
+		printf("(x%+d)\n",c2);
+	}else{
+		printf("(%dx%+d)\n",x2,c2);
+	}
 	return 0;
 }

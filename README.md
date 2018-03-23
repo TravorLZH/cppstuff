@@ -20,11 +20,11 @@ This is the first repository I created in C++. I have been writing programs in C
 
 ```
 main: enter coefficient for: ax^2+bx+c
-a=1
-b=7
-c=12
-main: Processing 1x^2+7x+12...
-main: (1x+3)*(1x+4)
+a=12
+b=-7
+c=-12
+main: Processing 12x^2-7x-12...
+(3x-4)(4x+3)
 ```
 
 ## Structures
