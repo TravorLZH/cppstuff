@@ -36,6 +36,8 @@ add_executable(bitfield bitfield.c)
 # Executable: structdemo
 add_executable(structdemo structdemo.c)
 
+# Executable: factor
+add_executable(factor factor.c)
 if(WIN32)
 	find_library(regex-lib gnurx)
 	if(NOT regex-lib)
