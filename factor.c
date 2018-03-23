@@ -43,24 +43,16 @@ int factor(int a,int b,int c,int *x1,int *c1,int *x2,int *c2){
 			y=e*f;	// Inner
 			*x1=d;
 			*x2=f;
-			if(c<0){
-				if(abs(x-y)==bx){
-					if(x>y){
-						*c1=-sign*e;
-						*c2=sign*g;
-					}else{
-						*c1=sign*e;
-						*c2=-sign*g;
-					}
-					return 0;
-				}
+			if(c<0&&bx==abs(x-y)){
+				sign=x>y?1:-1;
+				*c1=-sign*e;
+				*c2=sign*g;
+				return 0;
 			}
-			if(c>0){
-				if(bx==x+y){
-					*c1=sign*e;
-					*c2=sign*g;
-					return 0;
-				}
+			if(c>0&&bx==x+y){
+				*c1=sign*e;
+				*c2=sign*g;
+				return 0;
 			}
 		}
 	}
@@ -73,6 +65,7 @@ int factor(int a,int b,int c,int *x1,int *c1,int *x2,int *c2){
 
 int main(int argc,char **argv){
 	int a,b,c;	// Input variables
+	char neg=0;	// Is a negative?
 	int x1,c1,x2,c2;	// Output variables
 	int i;
 	if(argc<4){
@@ -89,10 +82,19 @@ int main(int argc,char **argv){
 		b=atoi(argv[2]);
 		c=atoi(argv[3]);
 	}
+	if(a<0){
+		neg=1;
+		a=-a;
+		b=-b;
+		c=-c;
+	}
 	printf("%s: Processing %dx^2%+dx%+d...\n",__func__,a,b,c);
 	if(factor(a,b,c,&x1,&c1,&x2,&c2)){
 		printf("Prime!\n");
 		return;
+	}
+	if(neg){
+		putchar('-');
 	}
 	if(x1==1){
 		printf("(x%+d)",c1);
