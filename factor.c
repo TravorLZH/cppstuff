@@ -8,30 +8,6 @@ typedef struct factor_pairs{
 	int b;
 } factorpair_t;
 
-inline int get_sign(int num){
-	return num/abs(num);
-}
-
-/* Compaire factor pairs
- * Returns 0 if equal, positive if reverse, otherwise negative
-*/
-int compare_pairs(const factorpair_t a,const factorpair_t b){
-	if(a.a==b.a&&a.b==b.b){
-		return 0;
-	}
-	if(a.a==b.b&&a.b==b.a){
-		return 1;
-	}
-	return -1;
-}
-
-void print_pairs(const factorpair_t *pairs,size_t n,const char *title){
-	int i;
-	for(i=0;i<n;i++){
-		printf("%s: Pair: %d, %d\n",title,pairs[i].a,pairs[i].b);
-	}
-}
-
 size_t fill_pairs(int num,const factorpair_t *pairs){
 	assert(num>0);
 	int i;
@@ -51,7 +27,7 @@ int factor(int a,int b,int c,int *x1,int *c1,int *x2,int *c2){
 	int ax=abs(a);
 	int bx=abs(b);
 	int cx=abs(c);
-	int sign=get_sign(b);
+	int sign=b/bx;
 	factorpair_t ap[ax];
 	factorpair_t cp[cx];
 	size_t na=fill_pairs(ax,ap);
