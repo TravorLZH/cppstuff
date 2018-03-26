@@ -27,6 +27,16 @@ main: Processing 12x^2-7x-12...
 (3x-4)(4x+3)
 ```
 
+* **squareroot**: Re-implementation of sqrt()
+
+It uses the following steps to get the possible accurate value:
+
+1. Guess a value called G
+
+1. Check if G is close enough to the input/G
+
+1. Return G if true, otherwise goto 1
+
 ## Structures
 
 * **bitfield**: A program that shows the value of struct with bitfield in the memory
