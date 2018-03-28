@@ -44,7 +44,7 @@ int factor(int a,int b,int c,int *x1,int *c1,int *x2,int *c2){
 			*x1=d;
 			*x2=f;
 			if(c<0&&bx==abs(x-y)){
-				sign=x>y?1:-1;
+				sign*=x>y?1:-1;
 				*c1=-sign*e;
 				*c2=sign*g;
 				return 0;
