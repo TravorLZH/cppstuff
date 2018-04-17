@@ -10,7 +10,8 @@ struct{
 	unsigned short word;
 } __attribute__((packed)) packed;
 
-int main(int argc,char **argv){
+int main(int argc,char **argv)
+{
 	deflt.byte=0xAA;
 	deflt.word=0xDDDD;
 	unsigned long long val=*(unsigned long long*)&deflt;

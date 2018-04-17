@@ -3,7 +3,8 @@
 
 #define LOGVAL	printf("\nValues\nstr1@%p: %s\nstr2@%p: %s\n",str1,str1,str2,str2);
 
-int main(void){
+int main(void)
+{
 	char str1[]="cat";
 	char str2[]="dog";
 	printf("Demonstration of Swap function");

@@ -10,11 +10,13 @@
  * 3. Exit if true, otherwise go to 1
 */
 
-bool closeEnough(register float a,register float b){
+bool closeEnough(register float a,register float b)
+{
 	return (abs(a-b)<0.001f);
 }
 
-float my_sqrt(register float val){
+float my_sqrt(register float val)
+{
 	register float guess=1;	// Always starts with one
 	while(!closeEnough(guess,val/guess)){
 		guess=(guess+val/guess)/2;
@@ -22,7 +24,8 @@ float my_sqrt(register float val){
 	return guess;
 }
 
-int main(void){
+int main(void)
+{
 	printf("Square root of 4 is %f\n",sqrt(4.0f));
 	return 0;
 }

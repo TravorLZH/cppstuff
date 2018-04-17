@@ -1,7 +1,8 @@
 #include <regex.h>
 #include <stdio.h>
 
-int main(void){
+int main(void)
+{
 	regex_t re;
 	regmatch_t matches[10];
 	char str[]="Travor Liu travor_lzh@outlook.com 15011964779";

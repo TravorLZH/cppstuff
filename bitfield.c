@@ -7,7 +7,8 @@ struct{
 	char d:2;
 } bitfield;
 
-int main(int argc,char **argv){
+int main(int argc,char **argv)
+{
 	bitfield.a=1;
 	bitfield.b=0;
 	bitfield.c=0x09;	// Binary: 1001

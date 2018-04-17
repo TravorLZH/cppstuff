@@ -7,7 +7,8 @@
 #include <string.h>
 #include <regex.h>
 
-int main(void){
+int main(void)
+{
     regex_t rx;
     regmatch_t match;
     size_t len;

@@ -9,7 +9,8 @@ typedef struct factor_pairs{
 	int b;
 } factorpair_t;
 
-size_t fill_pairs(int num,const factorpair_t *pairs){
+size_t fill_pairs(int num,const factorpair_t *pairs)
+{
 	assert(num>0);
 	int i;
 	factorpair_t *p=(factorpair_t*)pairs;
@@ -22,7 +23,8 @@ size_t fill_pairs(int num,const factorpair_t *pairs){
 	return p-pairs;
 }
 
-int factor(int a,int b,int c,int *x1,int *c1,int *x2,int *c2){
+int factor(int a,int b,int c,int *x1,int *c1,int *x2,int *c2)
+{
 	int i,j,x,y;
 	int d,e,f,g;
 	int ax=abs(a);
@@ -63,7 +65,8 @@ int factor(int a,int b,int c,int *x1,int *c1,int *x2,int *c2){
 	return -1;
 }
 
-int main(int argc,char **argv){
+int main(int argc,char **argv)
+{
 	int a,b,c;	// Input variables
 	char neg=0;	// Is a negative?
 	int x1,c1,x2,c2;	// Output variables
