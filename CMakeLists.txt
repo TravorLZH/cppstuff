@@ -41,6 +41,12 @@ add_executable(factor factor.c)
 
 # Executable: squareroot
 add_executable(squareroot squareroot.c)
+
+# Executable: binarysearch
+add_executable(binarysearch binarysearch.c)
+
+# Executable: cpudemo
+add_executable(cpudemo cpudemo.c)
 if(WIN32)
 	find_library(regex-lib gnurx)
 	if(NOT regex-lib)
