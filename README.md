@@ -14,6 +14,8 @@ This is the first repository I created in C++. I have been writing programs in C
 
 * **globalctors**: A demonstration of **GCC Global Constructor**: A function that is automatically called before **main**.
 
+* **cpudemo**: A x86-specific demonstration of getting CPU information using `cpuid`
+
 ## Mathematics
 
 * **factor**: This helps you factor any expressions that is in **ax<sup>2</sup>+bx+c** format. Following is the possible output
@@ -36,6 +38,8 @@ It uses the following steps to get the possible accurate value:
 1. Check if G is close enough to the input/G
 
 1. Return G if true, otherwise goto 1
+
+* **binarysearch**: An implementation of searching node in an array with least comparisons.
 
 ## Structures
 
