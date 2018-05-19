@@ -10,22 +10,33 @@
  * 3. Exit if true, otherwise go to 1
 */
 
-bool closeEnough(register float a,register float b)
+bool closeEnough(double a,double b)
 {
-	return (abs(a-b)<0.001f);
+	return (fabs(a-b)<b*0.001);
 }
 
-float my_sqrt(register float val)
+double betterGuess(double x,double g)
 {
-	register float guess=1;	// Always starts with one
-	while(!closeEnough(guess,val/guess)){
-		guess=(guess+val/guess)/2;
+	return ((g+x/g)/2);
+}
+
+double test(double x,double g)
+{
+	if(closeEnough(x/g,g)){
+		return g;
 	}
-	return guess;
+	return test(x,betterGuess(x,g));
+}
+
+double my_sqrt(double val)
+{
+	return test(val,1);
 }
 
 int main(void)
 {
-	printf("Square root of 4 is %f\n",sqrt(4.0f));
+	double root=my_sqrt(4.0f);
+	printf("Square root of 4 is %f\n",root);
 	return 0;
 }
+
