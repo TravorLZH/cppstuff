@@ -47,6 +47,9 @@ add_executable(binarysearch binarysearch.c)
 
 # Executable: cpudemo
 add_executable(cpudemo cpudemo.c)
+
+# Executable: ipaddr
+add_executable(ipaddr ipaddr.c)
 if(WIN32)
 	find_library(regex-lib gnurx)
 	if(NOT regex-lib)

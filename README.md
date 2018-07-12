@@ -7,19 +7,14 @@ This is the first repository I created in C++. I have been writing programs in C
 ## Miscellaneous Executables
 
 * **vectordemo**: A demonstration of `std::vector`. It's something similar to an array. But it contains more methods. It simply prints out everything inside the array.
-
 * **regexdemo**: A demonstration of **POSIX BRE** written in C language using **libgnurx** because I can't use the standard **C++11**'s regex library in **MinGW**.
-
 * **posixeredemo**: A demonstration of **POSIX ERE** which stands for Extended Regular Expression, written in C language too. I recently discovered that the only difference is to add REG\_EXTENDED in `cflags`.
-
 * **globalctors**: A demonstration of **GCC Global Constructor**: A function that is automatically called before **main**.
-
 * **cpudemo**: A x86-specific demonstration of getting CPU information using `cpuid`
 
 ## Mathematics
 
 * **factor**: This helps you factor any expressions that is in **ax<sup>2</sup>+bx+c** format. Following is the possible output
-
 ```
 main: enter coefficient for: ax^2+bx+c
 a=12
@@ -28,17 +23,11 @@ c=-12
 main: Processing 12x^2-7x-12...
 (3x-4)(4x+3)
 ```
-
 * **squareroot**: Re-implementation of sqrt()
-
 It uses the following steps to get the possible accurate value:
-
 1. Guess a value called G
-
 1. Check if G is close enough to the input/G
-
 1. Return G if true, otherwise goto 1
-
 * **binarysearch**: An implementation of searching node in an array with least comparisons.
 
 ## Structures
@@ -52,7 +41,6 @@ struct{
 	char d:2;
 } bitfield;
 ```
-
 * **structdemo**: A program that shows difference between packed struct and default (aligned) struct.
 
 ## Libraries
@@ -68,10 +56,12 @@ struct{
 ### Demonstrations of libvoid
 
 * **swapdemo**: Demonstration of **swap()**.
-
 * **searchdemo**: Demonstration of **lsearch()**.
-
 * **customcmpsearch**: Demonstration of **lsearchx()**.
+
+## Networking
+
+* **ipaddr**: A tool to get IP address from your machine
 
 ## Documents
 
