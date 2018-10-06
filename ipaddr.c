@@ -9,29 +9,24 @@
 #include <stdlib.h>
 #include <sys/socket.h>
 
+#define	NONSENSE_ADDR	"2.3.3.3"
+#define	NONSENSE_PORT	13131
+
 char buf[BUFSIZ];
 
 int main(void)
 {
-	struct hostent *hptr=NULL;
-	char **ptr=NULL;
-	gethostname(buf,BUFSIZ);
-	hptr=gethostbyname(buf);
-	assert(hptr!=NULL);
-	switch(hptr->h_addrtype)
-	{
-	case AF_INET:
-		ptr=hptr->h_addr_list;
-		for(;*ptr!=NULL;ptr++){
-			printf("%s\n",inet_ntop(hptr->h_addrtype,*ptr,buf,
-						sizeof(buf)));
-		}
-		printf("Preferred: %s\n",inet_ntop(hptr->h_addrtype,
-					hptr->h_addr,buf,sizeof(buf)));
-		break;
-	default:
-		printf("Unknown address type\n");
-		break;
-	}
+	struct sockaddr_in addr;
+	socklen_t size=sizeof(addr);
+	int sock=socket(AF_INET,SOCK_DGRAM,0);
+	memset(&addr,0,sizeof(addr));
+	addr.sin_family=AF_INET;
+	addr.sin_addr.s_addr=inet_addr(NONSENSE_ADDR);
+	addr.sin_port=NONSENSE_PORT;
+	connect(sock,(struct sockaddr*)&addr,size);
+	/* NOTE: I am recycling `addr' */
+	getsockname(sock,(struct sockaddr*)&addr,&size);
+	close(sock);
+	puts(inet_ntoa(addr.sin_addr));
 	return 0;
 }
