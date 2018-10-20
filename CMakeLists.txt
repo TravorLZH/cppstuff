@@ -50,6 +50,10 @@ add_executable(cpudemo cpudemo.c)
 
 # Executable: ipaddr
 add_executable(ipaddr ipaddr.c)
+
+# Executable: ftpdemo
+add_executable(ftpdemo ftpdemo.c)
+
 if(WIN32)
 	find_library(regex-lib gnurx)
 	if(NOT regex-lib)

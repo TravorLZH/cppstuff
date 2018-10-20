@@ -62,6 +62,9 @@ struct{
 ## Networking
 
 * **ipaddr**: A tool to get IP address from your machine
+* **ftpdemo**: Demonstration of FTP Protocol
+
+> Compile with `-DVERBOSE` helps show the response from server
 
 ## Documents
 
