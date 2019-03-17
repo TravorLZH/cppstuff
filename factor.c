@@ -72,7 +72,7 @@ int main(int argc,char **argv)
 	int x1,c1,x2,c2;	// Output variables
 	int i;
 	if(argc<4){
-		printf("%s: enter coefficient for: ax^2+bx+c\n",__func__);
+		printf("%s: enter coefficient for: ax^2+bx+c\n",argv[0]);
 		printf("a=");
 		scanf("%d",&a);
 		printf("b=");
@@ -91,7 +91,7 @@ int main(int argc,char **argv)
 		b=-b;
 		c=-c;
 	}
-	printf("%s: Processing %dx^2%+dx%+d...\n",__func__,a,b,c);
+	printf("%s: Processing %dx^2%+dx%+d...\n",argv[0],a,b,c);
 	if(factor(a,b,c,&x1,&c1,&x2,&c2)){
 		printf("Prime!\n");
 		return;
