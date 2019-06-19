@@ -54,6 +54,9 @@ add_executable(ipaddr ipaddr.c)
 # Executable: ftpdemo
 add_executable(ftpdemo ftpdemo.c)
 
+# Executable: primefactor
+add_executable(primefactor primefactor.c)
+
 if(WIN32)
 	find_library(regex-lib gnurx)
 	if(NOT regex-lib)

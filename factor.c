@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include <malloc.h>
+#include <stdlib.h>
 #include <assert.h>
 
 typedef struct factor_pairs{
@@ -72,18 +72,18 @@ int main(int argc,char **argv)
 	int x1,c1,x2,c2;	// Output variables
 	int i;
 	if(argc<4){
-		printf("%s: enter coefficient for: ax^2+bx+c\n",__func__);
-		printf("a=");
-		scanf("%d",&a);
-		printf("b=");
-		scanf("%d",&b);
-		printf("c=");
-		scanf("%d",&c);
-		assert(c!=0);
+		fprintf(stderr,"usage: %s a b c\n",argv[0]);
+		fprintf(stderr,"a,b,c as the parameters of:\n");
+		fprintf(stderr,"\tax^2+bx+c\n");
+		return -1;
 	}else{
 		a=atoi(argv[1]);
 		b=atoi(argv[2]);
 		c=atoi(argv[3]);
+		if(c==0){
+			fprintf(stderr,"error: c cannot be zero\n");
+			return -1;
+		}
 	}
 	if(a<0){
 		neg=1;
@@ -91,10 +91,10 @@ int main(int argc,char **argv)
 		b=-b;
 		c=-c;
 	}
-	printf("%s: Processing %dx^2%+dx%+d...\n",__func__,a,b,c);
+	printf("%s: Processing %dx^2%+dx%+d...\n",argv[0],a,b,c);
 	if(factor(a,b,c,&x1,&c1,&x2,&c2)){
 		printf("Prime!\n");
-		return;
+		return 1;
 	}
 	if(neg){
 		putchar('-');

@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 struct{
-	char a:1;
-	char b:1;
-	char c:4;
-	char d:2;
+	unsigned char a:1;
+	unsigned char b:1;
+	unsigned char c:4;
+	unsigned char d:2;
 } bitfield;
 
 int main(int argc,char **argv)
